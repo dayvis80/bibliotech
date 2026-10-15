@@ -1,0 +1,27 @@
+# Java / Spring Boot
+**/target/
+*.class
+*.log
+
+# Angular / Node
+**/node_modules/
+**/dist/
+**/.angular/
+**/coverage/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Secrets
+.env
+.env.*
+!.env.example
+**/application-local.properties
+**/application-local.yml
+**/application-local.yaml
+
+# Cypress
+**/cypress/videos/
+**/cypress/screenshots/
