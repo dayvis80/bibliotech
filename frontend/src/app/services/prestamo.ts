@@ -8,9 +8,9 @@ import { Observable } from 'rxjs';
 
 export class Prestamo {
 
-  private apiUrl = 'http://localhost:8080/api/prestamos';
+  private readonly apiUrl = 'http://localhost:8080/api/prestamos';
 
-  constructor(private http: HttpClient) {}
+  constructor(private readonly http: HttpClient) {}
 
   validarPrestamo(estudianteId: number, libroId: number): Observable<boolean> {
     const params = new HttpParams()
