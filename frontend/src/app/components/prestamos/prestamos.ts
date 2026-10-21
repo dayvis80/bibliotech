@@ -16,7 +16,7 @@ export class Prestamos {
   mensaje: string = '';
   disponible: boolean | null = null;
 
-  constructor(private prestamoService: Prestamo) {}
+  constructor(private readonly prestamoService: Prestamo) {}
 
   validarPrestamo(): void {
     this.prestamoService

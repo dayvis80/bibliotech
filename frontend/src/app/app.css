@@ -1,0 +1,5 @@
+/* EStilo báisco */
+:host{
+    display: block;
+    min-height: 100vh;
+}
