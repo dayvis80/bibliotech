@@ -14,6 +14,28 @@ jobs:
   backend:
     name: Backend - Maven y JUnit
     runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: bibliotech_db
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d bibliotech_db"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/bibliotech_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres_test
+      SPRING_PROFILES_ACTIVE: ci
+
     steps:
       - name: Obtener código
         uses: actions/checkout@v4
