@@ -33,7 +33,7 @@ jobs:
     env:
       SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/bibliotech_db
       SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: postgres_test
+      SPRING_DATASOURCE_PASSWORD: clave_incorrecta
       SPRING_PROFILES_ACTIVE: ci
 
     steps:
